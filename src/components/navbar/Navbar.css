@@ -1,0 +1,26 @@
+nav{
+    border:2px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem 1rem;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+button{
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    font-size: .9rem;
+}
+
+.nav-items img{
+    height: 2rem;
+    width: 2rem;
+}
+/* img{
+   
+} */

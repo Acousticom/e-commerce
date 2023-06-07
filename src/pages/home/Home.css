@@ -1,0 +1,11 @@
+.heroImage{
+    width: 50%;
+}
+
+.categoryImage{
+    width: 20rem;
+}
+.categoryList{
+    display: flex;
+   
+}
