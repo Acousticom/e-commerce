@@ -9,7 +9,7 @@ export const Home = () => {
   // const [category,setCategory]=useState()
   // console.log(category)
   return (
-    <div>
+    <div className="home">
       <div>
         <Link to="/product-listing-page/all">
           <img
