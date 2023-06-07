@@ -1,5 +1,5 @@
 import React from "react";
-import "../cartCard/CartCard.css"
+import "../cartCard/CartCard.css";
 import { useECommerce } from "../../context/ECommerceContext";
 
 export const CartCard = ({ product }) => {
@@ -43,32 +43,52 @@ export const CartCard = ({ product }) => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="cartCardWrapper">
       <h1>My Cart</h1>
-      <div className="container">
-      <img src={product?.image} alt="" />
-      <p>{product?.productName}</p>
-      <p>₹{product?.price}</p>
-      <p>{product?.mrp}</p>
-      <p>{product?.discountDisplayLabel}</p>
-      <button
-        onClick={() => decreaseQuantityHandler(product?.productId)}
-        disabled={product?.quantity <= 1}
-      >
-        -
-      </button>
-      <span>{product?.quantity}</span>
-      <button onClick={() => increaseQuantityHandler(product.productId)}>
-        +
-      </button>
-      <button onClick={() => removefromCartHandler(product?.productId)}>
-        Remove from Cart
-      </button>
-      <button onCanPlay={() => moveWishlistHandler(product?.productId)}>
-        Move to Wishlist
-      </button>
+      <div className="cartCardcontainer">
+        <div className="cartCardImage">
+          <img src={product?.image} alt="" />
+        </div>
+        <div className="descriptionButton">
+          <div className="cartCardProductDescription">
+            <div className="lineHeight">
+              <h3>{product?.productName}</h3>
+              <div className="pricing">
+                <p>₹{product?.price}</p>
+                <p className="mrp">₹{product?.mrp}</p>
+              </div>
+
+              <p className="discountDisplayLabel">
+                {product?.discountDisplayLabel}
+              </p>
+            </div>
+          </div>
+          <div className="cartCardButtons">
+            <div className="quantityButtonContainer">
+              <button
+                onClick={() => decreaseQuantityHandler(product?.productId)}
+                disabled={product?.quantity <= 1}
+              >
+                -
+              </button>
+              <span>{product?.quantity}</span>
+              <button
+                onClick={() => increaseQuantityHandler(product.productId)}
+              >
+                +
+              </button>
+            </div>
+            <div className="buttonsContainer">
+              <button onClick={() => removefromCartHandler(product?.productId)}>
+                Remove from Cart
+              </button>
+              <button onCanPlay={() => moveWishlistHandler(product?.productId)}>
+                Move to Wishlist
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      
     </div>
   );
 };

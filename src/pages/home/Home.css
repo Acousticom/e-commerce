@@ -1,5 +1,7 @@
 .heroImage{
-    width: 50%;
+    width: 100%;
+    margin-top: 2rem;
+    /* object-fit: contain; */
 }
 
 .categoryImage{
@@ -7,5 +9,8 @@
 }
 .categoryList{
     display: flex;
-   
+    justify-content: space-around;
+}
+h1{
+    text-align: center;
 }

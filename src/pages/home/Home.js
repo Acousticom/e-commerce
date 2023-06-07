@@ -14,7 +14,7 @@ export const Home = () => {
         <Link to="/product-listing-page/all">
           <img
             className="heroImage"
-            src="https://th.bing.com/th/id/OIP.nZ5q6Q4kci8ZTJxeoFVZ-gHaE8?w=267&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            src="https://images-static.nykaa.com/uploads/eab8444c-6773-4c5e-a7e4-3a08cf417250.jpg?tr=w-1200,cm-pad_resize"
             alt=""
           />
         </Link>

@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useECommerce } from "../context/ECommerceContext";
+import "../cart/Cart.css"
+import { useECommerce } from "../../context/ECommerceContext";
 import { useEffect } from "react";
-import { emptyCart } from "../assest/Images";
-import { CartCard } from "../components/cartCard/CartCard";
+import { emptyCart } from "../../assest/Images";
+import { CartCard } from "../../components/cartCard/CartCard";
 
 export const Cart = () => {
   const { state, dispatch } = useECommerce();
@@ -25,7 +26,7 @@ export const Cart = () => {
   }, [cart]);
   const discountPrice = totalMrp - totalPrice;
   return (
-    <div>
+    <div className="cart">
       {cart.length === 0 && (
         <div>
           <img src={emptyCart} alt="empty cart" />
@@ -44,7 +45,7 @@ export const Cart = () => {
       ))}
 
       {cart.length > 0 && (
-        <div>
+        <div className="priceDetails">
           <h2>Price Details</h2>
           <p>
             Price: <span>₹{totalMrp}</span>{" "}

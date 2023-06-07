@@ -1,12 +1,9 @@
 
 .product-card{
-    /* border: 2px solid black; */
+
     box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
-    width: 50%;
-    /* height: 35rem; */
+    width: 320px;
     list-style: none;
-    margin: 2rem;
-    padding: rem;
     position: relative;
     padding: 1rem;
 }

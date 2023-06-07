@@ -1,13 +1,23 @@
-.mrp{
-    text-decoration: line-through;
-    color: #7d8baf;
+.mrp {
+  text-decoration: line-through;
+  color: #7d8baf;
 }
 
-.container{
-    display: flex;
-    cursor: pointer;
+.container {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid black;
 }
-.sidebar{
-    display: block;
-    padding: 1rem;
+.sidebar {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+}
+.productListing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-left: 15rem;
 }

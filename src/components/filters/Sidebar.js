@@ -1,4 +1,5 @@
 import React from "react";
+import "../filters/Sidebar.css"
 import { useECommerce } from "../../context/ECommerceContext";
 import { ratingsBy, sortingBy } from "../../data/filterData";
 
@@ -23,8 +24,8 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
   };
 
   return (
-    <div>
-      <div className="filters">
+    <div className="sidebarContainer">
+      <div>
         <p>Filters</p>
         {showFilter ? (
           <button onClick={() => setShowFilter(false)}>Apply</button>
