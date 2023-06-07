@@ -63,7 +63,7 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
                 dispatch({ type: "RATING", payload: event.target.value })
               }
             />
-            {rate} star & above
+            {rate} ⭐ & above
           </label>
         </div>
       ))}

@@ -1,10 +1,58 @@
+
 .product-card{
-    border: 2px solid black;
-    width: 20%;
+    /* border: 2px solid black; */
+    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
+    width: 50%;
+    /* height: 35rem; */
     list-style: none;
     margin: 2rem;
     padding: rem;
+    position: relative;
+    padding: 1rem;
 }
-.productCardDescription{
-    
+.rating{
+    background-color: #30ab30;
+    /* border: 2px solid red; */
+    height: 2rem;
+    width: 2.5rem;
+    padding: 0rem 0rem;
+    border-radius: 0.2rem;
+    color: white;
+}
+.pricing{
+    display: flex;
+    gap: .5rem;
+}
+.lineHeight{
+    line-height: 0rem;
+}
+.brandRating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productCardDescription h3{
+    margin: 1px;
+}
+.discountDisplayLabel{
+    color: green;
+    font-weight: bold;
+}
+.wishlistButton{
+    border-radius: 50%;
+    padding: .2rem .2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: #d4d4d8;
+}
+.addToCartButton{
+    width: 100%;
+    border: none;
+    background-color: #121932;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
 }

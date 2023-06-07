@@ -1,5 +1,37 @@
-.container{
-    width: 70rem;
-    border: 2px solid red;
-    /* display: flex; */
+.productDetailsWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productDetailsContainer{
+    width: 55rem;
+    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.productDetailsProductImage{
+    width: 100%;
+}
+
+.productDetailsProductDiscription{
+    width: 80rem;
+    text-align: justify;
+    color: #121932;
+}
+
+.productDetailsProductDiscription .discountDisplayLabel{
+    font-size: large;
+}
+.wishlistBtn{
+    width: 100%;
+    border-radius: 5px ;
+}
+.addToCartBtn{
+    width: 100%;
+    background-color: #121932;
+    color: white;
+    margin-bottom: .2rem;
+    border-radius: 5px ;
 }

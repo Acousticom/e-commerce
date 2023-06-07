@@ -23,43 +23,62 @@ export const ProductDetail = () => {
   const isInCart = getIsInProducts(cart, productId);
   const navigate = useNavigate();
   return (
-    <div className="container">
-      <div>
-        <img src={productDetail?.image} alt="" />
-      </div>
-      <h2>{productDetail?.brand}</h2>
-      <h3>{productDetail?.productName}</h3>
-      <p>{productDetail?.rating}⭐</p>
-      <p>{productDetail?.description}</p>
-      <h3>₹ {productDetail?.price}</h3>
-      <h3>₹ {productDetail?.mrp}</h3>
-      {productDetail?.fastDelivery ? (
-        <p>Fastest Delivery</p>
-      ) : (
-        <p>Fastest Delivery Not Available</p>
-      )}
-      <p>Delivery Time: {productDetail?.deliveryTime}</p>
+    <div className="productDetailsWrapper">
+      <div className="productDetailsContainer">
+        <div className="productDetailsProductImage">
+          <img src={productDetail?.image} alt="" />
+        </div>
+        <div className="productDetailsProductDiscription">
+          <h1>{productDetail?.brand}</h1>
+          <h2>{productDetail?.productName}</h2>
+          <div className="productDetailsLineHeight">
+            <p>{productDetail?.rating}⭐</p>
+            <div className="productDetailsPricing">
+              <h3>₹ {productDetail?.price}</h3>
+              <h3 className="mrp">₹ {productDetail?.mrp}</h3>
+            </div>
+            <p className="discountDisplayLabel">
+              {productDetail?.discountDisplayLabel}
+            </p>
+          </div>
 
-      
-        {isInWishlist ? (
-          <button onClick={() => removeWishlistHandler(productId)}>
-            <BsFillHeartFill />
-            <p>Remove from Wishlist</p>
-          </button>
-        ) : (
-          <button onClick={() => addToWishlistHandler(productDetail)}>
-            <RiHeartAddLine />
-            <p>Add to Wishlist</p>
-          </button>
-        )}
-        {isInCart ? (
-          <button onClick={() => navigate("/cart")}>Go to Cart</button>
-        ) : (
-          <button onClick={() => addToCartHandler(productDetail)}>
-            Add to Cart
-          </button>
-        )}
-      
+          <p>{productDetail?.description}</p>
+          {productDetail?.fastDelivery ? (
+            <p>Fastest Delivery</p>
+          ) : (
+            <p>Fastest Delivery Not Available</p>
+          )}
+          <p>Delivery Time: {productDetail?.deliveryTime}</p>
+
+          {isInCart ? (
+            <button className="addToCartBtn" onClick={() => navigate("/cart")}>
+              Go to Cart
+            </button>
+          ) : (
+            <button
+              className="addToCartBtn"
+              onClick={() => addToCartHandler(productDetail)}
+            >
+              Add to Cart
+            </button>
+          )}
+          {isInWishlist ? (
+            <button
+              className="wishlistBtn"
+              onClick={() => removeWishlistHandler(productId)}
+            >
+              <BsFillHeartFill /> Remove from Wishlist
+            </button>
+          ) : (
+            <button
+              className="wishlistBtn"
+              onClick={() => addToWishlistHandler(productDetail)}
+            >
+              <RiHeartAddLine /> Add to Wishlist
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

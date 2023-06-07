@@ -1,10 +1,15 @@
 nav{
-    border:2px solid red;
     display: flex;
     justify-content: space-between;
-    padding: .2rem 1rem;
+    padding: 0rem 1rem;
+    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
+    /* margin-bottom: 0.5rem; */
 }
 
+.brand-name{
+    font-size: larger;
+    color: #121932;
+}
 .nav-items{
     display: flex;
     align-items: center;

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useECommerce } from "../context/ECommerceContext";
 import { useEffect } from "react";
 import { emptyCart } from "../assest/Images";
-import { CartCard } from "../components/CartCard";
+import { CartCard } from "../components/cartCard/CartCard";
 
 export const Cart = () => {
   const { state, dispatch } = useECommerce();

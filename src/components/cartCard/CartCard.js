@@ -1,5 +1,6 @@
 import React from "react";
-import { useECommerce } from "../context/ECommerceContext";
+import "../cartCard/CartCard.css"
+import { useECommerce } from "../../context/ECommerceContext";
 
 export const CartCard = ({ product }) => {
   const { state, dispatch } = useECommerce();
@@ -42,7 +43,9 @@ export const CartCard = ({ product }) => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
+      <h1>My Cart</h1>
+      <div className="container">
       <img src={product?.image} alt="" />
       <p>{product?.productName}</p>
       <p>₹{product?.price}</p>
@@ -64,6 +67,8 @@ export const CartCard = ({ product }) => {
       <button onCanPlay={() => moveWishlistHandler(product?.productId)}>
         Move to Wishlist
       </button>
+      </div>
+      
     </div>
   );
 };

@@ -5,27 +5,9 @@
 
 .container{
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    cursor: pointer;
 }
 .sidebar{
-    border: 2px solid red;
     display: block;
-    width: 40rem;
     padding: 1rem;
 }
-.productListingPageContainer{
-    /* display: flex;
-    justify-content: center;
-    margin-top: 5rem */
-}
-.cardList {
-    /* display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    width: calc(100% - 15rem);
-    margin-left: 15rem;
-    align-items: center;
-    width: 100vw; */
-  }
