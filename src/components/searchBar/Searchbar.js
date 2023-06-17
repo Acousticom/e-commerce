@@ -11,6 +11,7 @@ export const Searchbar = () => {
         onChange={(event) => dispatch({type:"SEARCH_TERM", payload:event.target.value})}
       />
 
+
     </div>
   );
 };

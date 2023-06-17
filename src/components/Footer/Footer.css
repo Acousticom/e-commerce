@@ -1,0 +1,16 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+    /* position: fixed; */
+}
+.aboutUs{
+    width: 20rem;
+    text-align:justify;
+}
+.followUsLink{
+    display: flex;
+    gap: 1rem;
+}

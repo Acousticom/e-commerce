@@ -1,0 +1,23 @@
+.loginForm{
+    width: 18rem;
+    height: 18rem;
+    border: 2px solid black;
+    padding: 2rem;
+    /* display:flex;
+    justify-content: center; */
+}
+.proileContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: 2px solid black;
+}
+.loginForm input{
+    width: 100%;
+    padding: .5rem 0rem;
+    margin: .5rem;
+}
+.loginForm button{
+    width: 100%;
+}
