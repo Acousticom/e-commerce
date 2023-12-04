@@ -6,25 +6,33 @@ import { ProductListingPage } from "./pages/productListingPage/ProductListingPag
 import { Cart } from "./pages/cart/Cart";
 import { ProductDetail } from "./pages/productDetails/ProductDetail";
 import { Wishlist } from "./pages/Wishlist";
-import { Checkout } from "./pages/Checkout";
+import { Checkout } from "./pages/checkout/Checkout";
 import { Profile } from "./pages/Profile/Profile";
 import { Footer } from "./components/Footer/Footer";
+import Layout from "./layout/Layout";
 
 function App() {
-
   return (
     <div className="App">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path={`/product-listing-page/:productCategory`} element={<ProductListingPage/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/wishlist" element={<Wishlist/>} />
-        <Route path="/checkout" element={<Checkout/>} />
-        <Route path="/profile" element={<Profile/>} />
-        <Route path="/product-detail/:productId" element={<ProductDetail/>} /> 
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Home />} />
+          <Route
+            path={`/product-listing-page/:productCategory`}
+            element={<ProductListingPage />}
+          />
+          <Route>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+          <Route
+            path="/product-detail/:productId"
+            element={<ProductDetail />}
+          />
+        </Route>
       </Routes>
-      <Footer/>
     </div>
   );
 }

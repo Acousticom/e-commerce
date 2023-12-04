@@ -19,9 +19,9 @@ export const Home = () => {
           />
         </Link>
 
-        <h1>Upto 60%off</h1>
+        <h1 className="label">Upto 60%off</h1>
       </div>
-      <h1>Shop By Category</h1>
+      <h1 className="label">Shop By Category</h1>
       <div className="categoryList">
         {" "}
         {productsCategories.map((category) => (

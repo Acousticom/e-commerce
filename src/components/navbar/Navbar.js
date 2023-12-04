@@ -5,7 +5,7 @@ import { MdOutlineShoppingCart, RiAccountCircleLine } from "../../assest/icons.j
 import { AiOutlineHeart } from "../../assest/icons.js";
 
 const Navbar = () => {
-  const {navigate}  = useNavigate();
+  const navigate  = useNavigate();
   return (
     <header>
       <nav>

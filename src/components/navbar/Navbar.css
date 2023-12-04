@@ -1,21 +1,26 @@
 nav{
     display: flex;
     justify-content: space-between;
-   
+    position: fixed;
+    top:0;
     padding: 0rem 1rem;
     box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
-
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .brand-name{
     font-size: larger;
     color: #121932;
+    cursor: pointer;
 }
 .nav-items{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
+    margin-right: 2rem;
 }
 button{
     padding: .5rem 1rem;
@@ -27,6 +32,4 @@ button{
     height: 2rem;
     width: 2rem;
 }
-/* img{
-   
-} */
+
