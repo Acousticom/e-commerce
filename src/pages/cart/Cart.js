@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../cart/Cart.css"
+import "../cart/Cart.css";
 import { useECommerce } from "../../context/ECommerceContext";
 import { useEffect } from "react";
 import { emptyCart } from "../../assest/Images";
@@ -26,39 +26,47 @@ export const Cart = () => {
   }, [cart]);
   const discountPrice = totalMrp - totalPrice;
   return (
-    <div className="cart">
-      {cart.length === 0 && (
-        <div>
-          <img src={emptyCart} alt="empty cart" />
-          <h1>Your shopping bag is empty!</h1>
-          <p>
-            Looks like you haven't added anything to your bag. Let's change
-            that.
-          </p>
-          <button onClick={() => navigate("/product-listing-page/all")}>
-            Back to shopping
-          </button>
-        </div>
-      )}
-      {cart.map((product) => (
-        <CartCard key={product.id} product={product} />
-      ))}
+    <>
+      <h1 className="cartHeader">My Cart</h1>
+      <div className="cart">
 
-      {cart.length > 0 && (
-        <div className="priceDetails">
-          <h2>Price Details</h2>
-          <p>
-            Price: <span>₹{totalMrp}</span>{" "}
-          </p>
-          <p>
-            Discount: <span>-₹{discountPrice}</span>
-          </p>
-          <h2>
-            Total Amount:<span>₹{totalPrice}</span>{" "}
-          </h2>
-          <button onClick={() => navigate("/checkout")}>Checkout</button>
+        {cart.length === 0 && (
+          <div className="emptyCart">
+            <img src={emptyCart} alt="empty cart" className="emptyCartImage"/>
+            <h2>Your shopping bag is empty!</h2>
+            <p>
+              Looks like you haven't added anything to your bag. Let's change
+              that.
+            </p>
+            <button onClick={() => navigate("/product-listing-page/all")} className="emptyCartButton">
+              Back to shopping
+            </button>
+          </div>
+        )}
+        
+        <div>
+          {cart.map((product) => (
+            <CartCard key={product.id} product={product} />
+          ))}
         </div>
-      )}
-    </div>
+        <div>
+          {cart.length > 0 && (
+            <div className="priceDetails">
+              <h2>Price Details</h2>
+              <p className="flexClass">
+                Price: <span>₹{totalMrp}</span>{" "}
+              </p>
+              <p className="flexClass">
+                Discount: <span className="discount">-₹{discountPrice}</span>
+              </p>
+              <h2 className="flexClass">
+                Total Amount:<span>₹{totalPrice}</span>{" "}
+              </h2>
+              <button onClick={() => navigate("/checkout")} className="checkoutButton">Checkout</button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 };

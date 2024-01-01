@@ -1,3 +1,11 @@
-.outlet{
-    margin-top: 3.5rem;
+.outlet {
+  margin-top: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.footer {
+  position: absolute;
+  bottom: 0rem;
 }

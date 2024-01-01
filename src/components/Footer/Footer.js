@@ -11,24 +11,24 @@ export const Footer = () => {
   const style={color:"white"}
   return (
     <div className="footerContainer">
-      <div className="aboutUs">
+      <div className="aboutUs footerColumn">
         {" "}
-        <h2>About Us</h2>
+        <h2 className="lineHeight">About Us</h2>
         <p>
           Clothify is a fashion e-commerce website website that provides
           high-quality products to our customers at affordable prices.
         </p>
       </div>
 
-      <div>
-        <h2>Contact Us</h2>
+      <div className="contactUs footerColumn">
+        <h2 className="lineHeight">Contact Us</h2>
         <p>645 Commercial Street, Banglore, India</p>
-        <p>(+91)1234567890</p>
+        <p className="lineHeight">(+91)1234567890</p>
         <p>info@Clothify.com</p>
       </div>
 
-      <div>
-        <h2>Follow Us</h2>
+      <div className="followUs footerColumn">
+        <h2 className="lineHeight">Follow Us</h2>
         <li className="followUsLink">
           <Link
             target="_blank"

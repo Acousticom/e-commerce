@@ -1,0 +1,39 @@
+.image{
+   width: 100%;
+   border-radius: 5px;
+}
+.productDetails{
+    line-height: 0.1rem;
+}
+.cardContainer{
+    width: 17rem;
+    padding: .7rem;
+    position: relative;
+}
+.cardContainer:hover{
+    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.addToWishlistBtn{
+    position: absolute;
+    top: 1rem;
+    right: 1.3rem;
+    border-radius: 50%;
+    border: none;
+    padding: 1px 2px;
+}
+.priceList{
+    display: flex;
+    gap: 1rem;
+}
+.cartButton{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #001325;
+    color: white;
+}
+.lineHeight{
+    line-height: 1rem;
+}

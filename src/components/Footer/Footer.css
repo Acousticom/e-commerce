@@ -1,17 +1,30 @@
 .footerContainer{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
     background-color: black;
     color: white;
     margin-top: 3rem;
-    position: sticky;
-    bottom:-15rem;
-}
-.aboutUs{
-    width: 20rem;
-    text-align:justify;
+    width: 100%;
+    padding: 1.5rem 0rem;
 }
 .followUsLink{
     display: flex;
     gap: 1rem;
+    justify-content: center;
+}
+.footerColumn{
+    width: 30%;
+}
+
+/* for tablets */
+@media screen and (max-width: 430px){
+    .footerContainer{
+        display: block;
+    }
+    .footerColumn{
+        width: 100%;
+        margin:2rem 0rem ;
+    }
 }

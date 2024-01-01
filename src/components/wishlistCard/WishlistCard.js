@@ -1,8 +1,9 @@
 import React from "react";
-import { useECommerce } from "../context/ECommerceContext";
+import { useECommerce } from "../../context/ECommerceContext";
 import { useNavigate } from "react-router-dom";
-import { getIsInProducts } from "../utils";
-import {BsFillHeartFill,RiHeartAddLine} from "../assest/icons"
+import { getIsInProducts } from "../../utils";
+import { BsFillHeartFill, RiHeartAddLine } from "../../assest/icons";
+import styles from "./WishlistCard.module.css";
 // import { toast } from "react-toastify";
 export const WishlistCard = ({ product }) => {
   const { dispatch, state, removeWishlistHandler } = useECommerce();
@@ -36,35 +37,41 @@ export const WishlistCard = ({ product }) => {
   );
 
   return (
-    <div>
+    <div className={styles.cardContainer}>
       <div
-        className="cardContainer"
         onClick={() => navigate(`/product-detail/${productId}`)}
       >
-        <img src={image} alt="" />
-        <strong>{brand}</strong>
-        <p>{productName}</p>
-        <p className="price">₹{price}</p>
-        <p className="mrp">{mrp}</p>
-        <p className="discountDisplayLabel">{discountDisplayLabel}</p>
+        <img src={image} alt="" className={styles.image} />
+        <div className={styles.productDetails}>
+          <p>
+            <strong>{brand}</strong>
+          </p>
+
+          <p className={styles.lineHeight}>{productName}</p>
+          <div className={styles.priceList}>
+            <p className="price">₹{price}</p>
+            <p className="mrp">₹{mrp}</p>
+            <p className="discountDisplayLabel">{discountDisplayLabel}</p>
+          </div>
+        </div>
       </div>
 
       {isInCart ? (
-        <button className="cartButton" onClick={() => navigate("/cart")}>
+        <button className={styles.cartButton} onClick={() => navigate("/cart")}>
           Go to cart
         </button>
       ) : (
-        <button className="cartButton" onClick={() => cartHandler(productId)}>
+        <button className={styles.cartButton} onClick={() => cartHandler(productId)}>
           Add to Cart
         </button>
       )}
 
       {isInWishlist ? (
         <button
-        //   className={classes.removeWishlistButton}
+          className={styles.addToWishlistBtn}
           onClick={() => removeWishlistHandler(productId)}
         >
-          <BsFillHeartFill size="18" />
+          <BsFillHeartFill size="18" color="#fc7684"/>
         </button>
       ) : (
         <button
@@ -78,4 +85,3 @@ export const WishlistCard = ({ product }) => {
     </div>
   );
 };
-

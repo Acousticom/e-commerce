@@ -1,11 +1,14 @@
 .cartCardcontainer{
     display: flex;
-    width: 40rem;
+    /* width: 40rem; */
     padding: 1rem;
-    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .cartCardcontainer img{
     width: 10rem;
+    height: 12rem;
 }
 
 .quantityButtonContainer{
@@ -18,14 +21,20 @@
 
 .buttonsContainer{
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: .5rem;
 
 }
-.buttonsContainer button{
-    background-color: #121932;
+.removeFromCart{
+    color:#fc7684 ;
     border: none;
+    border-radius: 5px;
+}
+.moveTowishlist{
+    background-color: #011324;
     color: white;
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
 }
 .quantityButtonContainer button{
     border: none;
@@ -36,4 +45,7 @@
 }
 .cartCardImage{
     margin-right: 1rem;
+}
+.cartCardProductDescription{
+    overflow: hidden;
 }

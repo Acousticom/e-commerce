@@ -112,6 +112,12 @@ export const productReducer = (state, action) => {
         selectedAddress: [payload],
       };
     }
+    case "SELECT_ADDRESS": {
+      return {
+        ...state,
+        selectedAddress: [payload],
+      };
+    }
     default:
       return { ...state };
   }

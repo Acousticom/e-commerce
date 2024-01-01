@@ -7,6 +7,7 @@ import {
 } from "react";
 import { productReducer, initialState } from "../reducer/productReducer";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const ECommerceContext = createContext();
 
@@ -17,24 +18,30 @@ const ECommerceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productReducer, initialState);
   const navigate = useNavigate();
 
+  const noOfItemsInCart = state?.cart?.length;
+  const noOfItemsInWishlist = state?.wishlist?.length;
+
   const removeWishlistHandler = (id) => {
     const updatedWishlist = state.wishlist.filter(
       (product) => product.productId !== Number(id)
     );
     dispatch({ type: "REMOVE_FROM_WISHLIST", payload: updatedWishlist });
+    toast.success("Removed from wishlist")
   };
   const addToWishlistHandler = (product) => {
     // user
     //   ? dispatch({ type: "ADD_TO_WISHLIST", payload: product })
     //   : navigate("/login");
-    dispatch({ type: "ADD_TO_WISHLIST", payload: product })
+    dispatch({ type: "ADD_TO_WISHLIST", payload: product });
+    toast.success("Added from wishlist")
   };
 
   const addToCartHandler = (product) => {
     // user
     //   ? dispatch({ type: "ADD_TO_CART", payload: product })
     //   : navigate("/login");
-    dispatch({ type: "ADD_TO_CART", payload: product })
+    dispatch({ type: "ADD_TO_CART", payload: product });
+    toast.success("Added to cart")
   };
 
   const getProductsData = async () => {
@@ -65,7 +72,17 @@ const ECommerceProvider = ({ children }) => {
 
   return (
     <ECommerceContext.Provider
-      value={{ productsData, productsCategories, state, dispatch,removeWishlistHandler,addToWishlistHandler, addToCartHandler }}
+      value={{
+        productsData,
+        productsCategories,
+        state,
+        dispatch,
+        removeWishlistHandler,
+        addToWishlistHandler,
+        addToCartHandler,
+        noOfItemsInCart,
+        noOfItemsInWishlist,
+      }}
     >
       {children}
     </ECommerceContext.Provider>

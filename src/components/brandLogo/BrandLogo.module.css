@@ -1,0 +1,21 @@
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.brandLogo{
+    width: 40px;
+    height: 40px;
+}
+.brandName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(3, 3, 95),blue , #d407a8, #fc7684);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (760px>=width){
+    .brandLogo{
+        display: none;
+    }
+}

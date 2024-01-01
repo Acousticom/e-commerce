@@ -10,6 +10,7 @@ export const Checkout = () => {
   //   const handleCheckoutClick = () => {
   //     handleCheckout(selectedAddress, totalPrice);
   //   };
+  console.log(selectedAddress)
   return (
     <div className={styles.container}>
       <div className={styles.addressContainer}>
@@ -17,7 +18,7 @@ export const Checkout = () => {
         {address.map((user) => (
           <div className={styles.addressListContainer}>
             <div className={styles.addressList}>
-              <label key={user.id}>
+              <label key={user.id} className={styles.label}>
                 <input
                   type="radio"
                   name="user"
@@ -27,10 +28,10 @@ export const Checkout = () => {
                   }
                 />
               
-              <div className={styles.lineHeight}>
-                <h3>{user.name}</h3>
+              <div>
+                <h3 className={styles.lineHeight}>{user.name}</h3>
                 <p>{user.address}</p>
-                <p>
+                <p className={styles.lineHeight}>
                   Phone Number: +1 <span>{user.contact}</span>
                 </p>
               </div>
@@ -49,13 +50,13 @@ export const Checkout = () => {
             </div>
           ))}
           <div>
-        <p className={styles.flexClass}>
+        <p className="flexClass">
           Price: <span>₹{totalMrp}</span>
         </p>
-        <p className={styles.flexClass}>
-          Discount: <span className={styles.discount}>-₹{discountPrice}</span>
+        <p className="flexClass">
+          Discount: <span className="discount">-₹{discountPrice}</span>
         </p>
-        <h3 className={styles.flexClass}>
+        <h3 className="flexClass">
           Total Amount:<span>₹{totalPrice}</span>
         </h3>
         </div>

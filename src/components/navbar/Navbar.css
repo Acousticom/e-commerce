@@ -1,35 +1,75 @@
-nav{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top:0;
-    padding: 0rem 1rem;
-    box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
-    width: 100%;
-    background-color: #fff;
-    z-index: 99;
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0rem 1rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.6);
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
 }
-
-.brand-name{
+.navbar{
+    display: flex;
+  justify-content: space-between;
+}
+.navLink {
+  position: relative;
+  padding: 6px;
+}
+.productLength {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: #fc7684;
+  border-radius: 50%;
+  padding: 2px 3px;
+  color: white;
+  font-weight: 700;
+}
+/* .brand-name{
     font-size: larger;
     color: #121932;
     cursor: pointer;
+    border: 2px solid red;
+} */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 2rem;
 }
-.nav-items{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-right: 2rem;
-}
-button{
-    padding: .5rem 1rem;
-    border-radius: 3px;
-    font-size: .9rem;
-}
-
-.nav-items img{
-    height: 2rem;
-    width: 2rem;
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
 
+.nav-items img {
+  height: 2rem;
+  width: 2rem;
+}
+.navList {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (760px<=width) {
+  .responsiveNavbar {
+    display: none;
+  }
+}
+
+@media (760px>=width){
+  .searchBarHome{
+    padding-bottom:5px ;
+  }
+    .navbar{
+        display: none;
+    }
+    .nav-items{
+        display: flex;
+        justify-content: space-between;
+    }
+    .searchBarHome{
+        margin-top:0 ;
+    }
+}

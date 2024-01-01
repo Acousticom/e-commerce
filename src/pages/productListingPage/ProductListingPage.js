@@ -9,9 +9,10 @@ import {
   getFilteredByRating,
   getSortedByPrice,
   getSortedProductsBySlider,
-  // getSearchProducts,
 } from "../../utils";
 import { ProductCard } from "../productCard/ProductCard";
+import Modal from "react-modal";
+import SidebarModal from "../../components/filters/SidebarModal";
 
 export const ProductListingPage = () => {
   const { productsData, productsCategories, state, dispatch } = useECommerce();
@@ -46,16 +47,15 @@ export const ProductListingPage = () => {
     sortedByPriceProducts,
     priceInput
   );
-  // const searchedProducts = getSearchProducts(sortedProducts, searchTerm);
   return (
     <div className="container">
-      <div className="sidebar">
+      <div className="sidebarContent">
         <Sidebar
           filteredCategory={filteredCategory}
           showFilter={showFilter}
           setShowFilter={setShowFilter}
         />{" "}
-        <button onClick={() => setShowFilter(true)}>Filters</button>
+        {/* <button onClick={() => setShowFilter(true)}>Filters</button> */}
         <button onClick={clearFilterHandler}>clear</button>
       </div>
       <div className="productListing">
@@ -63,6 +63,20 @@ export const ProductListingPage = () => {
           <ProductCard product={product} />
         ))}
       </div>
+
+      {/* responsive sidebar */}
+      {/* <SidebarModal showFilter={showFilter}/> */}
+      {/* <Modal isOpen={showFilter} onRequestClose={()=>setShowFilter(!showFilter)}>
+            <Sidebar />
+      </Modal> */}
+      {/* <div className="sidebarButtonContainer">
+        <div>
+          <button onClick={() => setShowFilter(!showFilter)}>Filters</button>
+        </div>
+        <div>
+          <button onClick={clearFilterHandler}>Clear</button>
+        </div>
+      </div> */}
     </div>
   );
 };

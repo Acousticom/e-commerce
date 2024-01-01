@@ -25,8 +25,7 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
 
   return (
     <div className="sidebarContainer">
-      <div>
-        <p>Filters</p>
+      {/* <div>
         {showFilter ? (
           <button onClick={() => setShowFilter(false)}>Apply</button>
         ) : (
@@ -36,9 +35,9 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
         )}
       </div>
 
-      <hr />
+ */}
 
-      <h3>Category</h3>
+      <h3 className="lineHeight">Category</h3>
       {productsCategories.map((category) => (
         <div className="category">
           <input
@@ -50,8 +49,8 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
           <label>{category.categoryName}</label>
         </div>
       ))}
-      <hr />
-      <h3>Rating</h3>
+
+      <h3 className="lineHeight">Rating</h3>
       {ratingsBy.map((rate, index) => (
         <div>
           <label key={index}>
@@ -68,9 +67,9 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
           </label>
         </div>
       ))}
-      <hr />
 
-      <h3>Sort by</h3>
+
+      <h3 className="lineHeight">Sort by</h3>
       {sortingBy.map((sort) => (
         <div>
           <label>
@@ -87,9 +86,9 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
           </label>
         </div>
       ))}
-      <hr />
 
-      <h3>Price</h3>
+
+      <h3 className="lineHeight">Price</h3>
       <p>{priceInput}</p>
       <input
         type="range"

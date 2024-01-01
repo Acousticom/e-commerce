@@ -29,17 +29,17 @@ export const ProductDetail = () => {
           <img src={productDetail?.image} alt="" />
         </div>
         <div className="productDetailsProductDiscription">
-          <h1>{productDetail?.brand}</h1>
+          <h1 className="lineHeight">{productDetail?.brand}</h1>
           <h2>{productDetail?.productName}</h2>
-          <div className="productDetailsLineHeight">
-            <p>{productDetail?.rating}⭐</p>
+          <div className="productDetailsLineHeight ">
+            <p>⭐ {productDetail?.rating}</p>
             <div className="productDetailsPricing">
               <h3>₹ {productDetail?.price}</h3>
               <h3 className="mrp">₹ {productDetail?.mrp}</h3>
+              <p className="discountDisplayLabel">
+                {productDetail?.discountDisplayLabel}
+              </p>
             </div>
-            <p className="discountDisplayLabel">
-              {productDetail?.discountDisplayLabel}
-            </p>
           </div>
 
           <p>{productDetail?.description}</p>

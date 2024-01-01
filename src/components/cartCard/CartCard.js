@@ -1,6 +1,7 @@
 import React from "react";
 import "../cartCard/CartCard.css";
 import { useECommerce } from "../../context/ECommerceContext";
+import toast from "react-hot-toast";
 
 export const CartCard = ({ product }) => {
   const { state, dispatch } = useECommerce();
@@ -9,15 +10,20 @@ export const CartCard = ({ product }) => {
   const removefromCartHandler = (id) => {
     const updatedCart = cart.filter((product) => product.productId !== id);
     dispatch({ type: "REMOVE_FROM_CART", payload: updatedCart });
+    toast.success("Product removed from cart")
   };
+
   const moveWishlistHandler = (id) => {
+    console.log(id)
     const updatedCart = cart.filter((product) => product.productId !== id);
     const product = cart.find((product) => product.productId === id);
     dispatch({
       type: "MOVE_TO_WISHLIST_FROM_CART",
       payload: { updatedCart, product },
     });
+    toast.success("Moved to wishlist")
   };
+
   const decreaseQuantityHandler = (id) => {
     const updatedCart = cart.map((product) =>
       product.productId === id
@@ -28,6 +34,7 @@ export const CartCard = ({ product }) => {
       type: "DECREASE_CART_PRODUCT_QUANTITY",
       payload: updatedCart,
     });
+    toast.success("Quantity decreased")
   };
 
   const increaseQuantityHandler = (id) => {
@@ -40,19 +47,19 @@ export const CartCard = ({ product }) => {
       type: "DECREASE_CART_PRODUCT_QUANTITY",
       payload: updatedCart,
     });
+    toast.success("Quantity increased")
   };
 
   return (
     <div className="cartCardWrapper">
-      <h1>My Cart</h1>
       <div className="cartCardcontainer">
         <div className="cartCardImage">
           <img src={product?.image} alt="" />
         </div>
-        <div className="descriptionButton">
+        <div className="descriptionContainer">
           <div className="cartCardProductDescription">
             <div className="lineHeight">
-              <h3>{product?.productName}</h3>
+              <h3 style={{lineHeight:"15px"}}>{product?.productName}</h3>
               <div className="pricing">
                 <p>₹{product?.price}</p>
                 <p className="mrp">₹{product?.mrp}</p>
@@ -79,10 +86,10 @@ export const CartCard = ({ product }) => {
               </button>
             </div>
             <div className="buttonsContainer">
-              <button onClick={() => removefromCartHandler(product?.productId)}>
+              <button onClick={() => removefromCartHandler(product?.productId)} className="removeFromCart">
                 Remove from Cart
               </button>
-              <button onCanPlay={() => moveWishlistHandler(product?.productId)}>
+              <button onClick={() => moveWishlistHandler(product?.productId)} className="moveTowishlist">
                 Move to Wishlist
               </button>
             </div>

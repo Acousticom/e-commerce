@@ -1,4 +1,10 @@
 .sidebarContainer{
     width: 15rem;
-    /* position: fixed; */
+    /* margin-top: 1rem; */
 }
+
+/* @media(964px>=width){
+    .sidebarContainer{
+        display: none;
+    }
+} */

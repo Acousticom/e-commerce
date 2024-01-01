@@ -4,19 +4,71 @@
 }
 .container {
   display: flex;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 100%;
 }
 .sidebar {
   width: 100%;
   padding: 1rem;
   position: fixed;
+  border: 2px solid blue;
+  /* top: 5rem; */
 }
 .productListing {
+  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-left: 15rem;
   margin-top: 2rem;
+   /* cursor: pointer; */
+   border: 2px solid red;
 }
+.sidebarButtonContainer{
+  /* display: none; */
+}
+
+/* @media(964px>=width){
+  .sidebarContent{
+      display: none;
+      visibility: hidden;
+  }
+  .productListing {
+    margin-left: 0;
+    justify-content: space-around;
+  }
+  .sidebarButtonContainer{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .sidebarButtonContainer button{
+    border: none;
+    background-color: white;
+    margin: 0px 20px;
+    font-size: large;
+    font-weight: 600;
+  }
+}
+.responsiveSidebarWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border: 2px solid black;
+}
+.responsiveSidebarContent{
+  background-color: red;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+Modal{
+  background-color: blue;
+} */

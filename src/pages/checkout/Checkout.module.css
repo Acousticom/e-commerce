@@ -1,22 +1,26 @@
 .container{
-    margin-top: 7rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 .addressListContainer{
     width: fit-content;
-    width: 100%;
     box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
     margin: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    width: 90%;
 }
 .addressList{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    border: 2px solid black;
+    padding-left: 10px;
 }
 .lineHeight{
     line-height: 10px;
@@ -28,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: center;
     /* margin-right: 3rem; */
 }
@@ -40,17 +44,18 @@
 .textAlign{
     text-align: center;
 }
-.flexClass{
-    display: flex;
-    justify-content: space-between;
-}
-.discount{
-    color: green;
-}
+
 .button{
     width: 100%;
     color: white;
     background-color: #fc7684;
     border: none;
     border-radius: 5px;
+}
+.label{
+    cursor: pointer;
+}
+
+@media (800px>=width){
+
 }

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: center;
+}
+.emptyWishlistImage{
+    width: 100%;
+}
+.emptyWishlistContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.emptyWishlist{
+    width: 15rem;
+}
+.button{
+    width: 100%;
+    background-color: #fc7684;
+    border: none;
+    padding: .5rem 0rem;
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+}
