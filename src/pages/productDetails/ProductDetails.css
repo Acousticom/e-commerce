@@ -12,7 +12,6 @@
     margin-top: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-    /* text-align: center; */
 }
 .productDetailsProductImage{
     width: 20rem;
@@ -22,7 +21,6 @@
 }
 .productDetailsProductDiscription{
     width: 80rem;
-    /* text-align: justify; */
     color: #121932;
 }
 

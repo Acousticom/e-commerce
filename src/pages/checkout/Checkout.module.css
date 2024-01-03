@@ -34,7 +34,6 @@
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    /* margin-right: 3rem; */
 }
 .orderDetailsContainer{
     box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
@@ -54,8 +53,4 @@
 }
 .label{
     cursor: pointer;
-}
-
-@media (800px>=width){
-
 }

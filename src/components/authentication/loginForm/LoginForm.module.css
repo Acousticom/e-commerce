@@ -47,3 +47,9 @@
     font-size: medium;
     font-weight: bold;
 }
+
+@media(964px>=width){
+    .mainImage{
+        display: none;
+    }
+}

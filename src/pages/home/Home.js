@@ -5,10 +5,6 @@ import "../home/Home.css";
 export const Home = () => {
   const { productsCategories } = useECommerce();
   const navigate=useNavigate()
-  // const filteredProducts=productsCategories.filter((category)=>)
-  // const categories=["musical instrument","nutrition","clothes","gadgets","sports equipments","home appliances"]
-  // const [category,setCategory]=useState()
-  // console.log(category)
   return (
     <div className="home">
       <div>

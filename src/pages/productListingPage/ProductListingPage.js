@@ -11,13 +11,11 @@ import {
   getSortedProductsBySlider,
 } from "../../utils";
 import { ProductCard } from "../productCard/ProductCard";
-import Modal from "react-modal";
-import SidebarModal from "../../components/filters/SidebarModal";
 
 export const ProductListingPage = () => {
-  const { productsData, productsCategories, state, dispatch } = useECommerce();
+  const { productsData, state, dispatch } = useECommerce();
   const { productCategory } = useParams();
-  const [showFilter, setShowFilter] = useState();
+  const [showFilter, setShowFilter] = useState(false);
   const { categoryFilters, rating, sortBy, priceInput, searchTerm, isLoading } =
     state;
 
@@ -55,7 +53,6 @@ export const ProductListingPage = () => {
           showFilter={showFilter}
           setShowFilter={setShowFilter}
         />{" "}
-        {/* <button onClick={() => setShowFilter(true)}>Filters</button> */}
         <button onClick={clearFilterHandler}>clear</button>
       </div>
       <div className="productListing">
@@ -65,18 +62,26 @@ export const ProductListingPage = () => {
       </div>
 
       {/* responsive sidebar */}
-      {/* <SidebarModal showFilter={showFilter}/> */}
-      {/* <Modal isOpen={showFilter} onRequestClose={()=>setShowFilter(!showFilter)}>
-            <Sidebar />
-      </Modal> */}
-      {/* <div className="sidebarButtonContainer">
+      {showFilter && (
+        <div className="responsiveSidebarWrapper">
+          <div className="responsiveSidebar">
+            <Sidebar
+              filteredCategory={filteredCategory}
+              showFilter={showFilter}
+              setShowFilter={setShowFilter}
+            />
+            <button className="applyButton">Apply</button>
+          </div>
+        </div>
+      )}
+       <div className="sidebarButtonContainer">
         <div>
           <button onClick={() => setShowFilter(!showFilter)}>Filters</button>
         </div>
         <div>
           <button onClick={clearFilterHandler}>Clear</button>
         </div>
-      </div> */}
-    </div>
+      </div>
+</div>
   );
 };

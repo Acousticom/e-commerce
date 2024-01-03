@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { useAuth } from "../../../context/authContext";
 
 const SignupForm = () => {
-  const {signupUser}=useAuth()
+  const { signupUser } = useAuth();
   const [userDetails, setUserDetails] = useState({
     firstName: "",
     lastName: "",
@@ -16,18 +16,17 @@ const SignupForm = () => {
     confirmPassword: "",
   });
 
-  const signupSubmitHandler=(event)=>{
-    event.preventDefault()
-    if(userDetails.password!==userDetails.confirmPassword){
-      toast.error("Your password and confirmpassword does not match")
+  const signupSubmitHandler = (event) => {
+    event.preventDefault();
+    if (userDetails.password !== userDetails.confirmPassword) {
+      toast.error("Your password and confirmpassword does not match");
+    } else {
+      signupUser(userDetails);
     }
-    else{
-      signupUser(userDetails)
-    }
-  }
+  };
   return (
     <div className={styles.container}>
-      <img src={mainImage} alt="" className={styles.mainImage} />
+      <img src={mainImage} alt="" className={styles.mainImage}/>
       <div className={styles.signupContainer}>
         <BrandLogo />
         <form action="" className={styles.form} onSubmit={signupSubmitHandler}>
@@ -79,6 +78,7 @@ const SignupForm = () => {
             />
           </label>
           <div className={styles.inputContainer}>
+            {" "}
             <label htmlFor="password" className={styles.label}>
               Password:
               <input
@@ -110,7 +110,10 @@ const SignupForm = () => {
               />
             </label>
           </div>
-          <button className={styles.button} type="submit">Signup</button>
+
+          <button className={styles.button} type="submit">
+            Signup
+          </button>
         </form>
         <p className={styles.center}>
           Already have an account?{" "}

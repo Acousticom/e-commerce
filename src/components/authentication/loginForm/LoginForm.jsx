@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
-import brandImage from "../../../assest/brandLogo.png";
 import { useAuth } from "../../../context/authContext";
 import { Link } from "react-router-dom";
 import BrandLogo from "../../brandLogo/BrandLogo";

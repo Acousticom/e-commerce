@@ -25,12 +25,6 @@ nav {
   color: white;
   font-weight: 700;
 }
-/* .brand-name{
-    font-size: larger;
-    color: #121932;
-    cursor: pointer;
-    border: 2px solid red;
-} */
 .nav-items {
   display: flex;
   align-items: center;

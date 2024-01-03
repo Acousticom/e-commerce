@@ -1,7 +1,7 @@
 import React from "react";
 import "../productCard/ProductCard.css";
 import { useECommerce } from "../../context/ECommerceContext";
-import { useParams, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { BsFillHeartFill, RiHeartAddLine } from "../../assest/icons";
 import { getIsInProducts } from "../../utils";
 export const ProductCard = ({ product }) => {
@@ -24,13 +24,12 @@ export const ProductCard = ({ product }) => {
       >
         <img src={product.image} alt="" />
         <div className="productCardDescription">
-          <div className="brandRating">
+          <div className="brandRating lineHeight">
             <h3>{product.brand}</h3>
-
             <p>{product.rating}⭐</p>
           </div>
 
-          <h4>{product.productName}</h4>
+          <h4 style={{marginTop:"0rem"}}>{product.productName}</h4>
           <div className="lineHeight">
             <div className="pricing">
               <h3>₹ {product.price}</h3>

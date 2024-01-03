@@ -1,15 +1,16 @@
 
 .product-card{
-
     box-shadow:  0 4px 12px 0 rgba(0, 0, 0, 0.6);
     width: 320px;
     list-style: none;
     position: relative;
     padding: 1rem;
 }
+.product-card li{
+    cursor: pointer;
+}
 .rating{
     background-color: #30ab30;
-    /* border: 2px solid red; */
     height: 2rem;
     width: 2.5rem;
     padding: 0rem 0rem;

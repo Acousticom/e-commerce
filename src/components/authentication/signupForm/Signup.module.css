@@ -1,7 +1,7 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 100vh;
 }
 .mainImage{
@@ -16,8 +16,7 @@
 .form{
     display: flex;
     flex-direction: column;
-    width: 35rem;
-    /* padding: ; */
+    width: 20rem;
 }
 .label{
     display: flex;
@@ -25,8 +24,6 @@
     font-size: large;
 }
 .inputContainer{
-    display: flex;
-    justify-content: space-between;
     margin: 10px 0px;
 }
 .input{
@@ -47,4 +44,20 @@
     font-size: large;
     color: white;
     border-radius: 5px;
+}
+
+@media(1000px>=width){
+    .mainImage{
+        display: none;
+    }
+}
+
+@media (425px>=width){
+    .form{
+        width: 100%;
+    }
+    .signupContainer{
+        padding: 1rem .5rem;
+        width: 90%;
+    }
 }

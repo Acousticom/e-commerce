@@ -1,7 +1,6 @@
 .heroImage{
     width: 100%;
     margin-top: 2rem;
-    /* object-fit: contain; */
 }
 
 .saleImageContainer{
@@ -68,13 +67,11 @@
     }
     .saleImage{
         width: 100%;
-        /* padding: 0rem .5rem; */
     }
     .label{
         line-height: 20px;
         margin: .5rem 0rem;
         padding: 0rem 0.5rem;
-        /* border: 2px solid red; */
     }
     .categoryImage{
         display: block;

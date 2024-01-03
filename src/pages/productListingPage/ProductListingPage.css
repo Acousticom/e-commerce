@@ -4,32 +4,34 @@
 }
 .container {
   display: flex;
-  /* cursor: pointer; */
   width: 100%;
 }
 .sidebar {
   width: 100%;
   padding: 1rem;
   position: fixed;
-  border: 2px solid blue;
-  /* top: 5rem; */
+  top: 10rem;
+}
+.sidebarContent{
+  position: fixed;
+  top:6rem;
+  left: 1rem;
+  z-index: 1;
+  background: white;
 }
 .productListing {
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-left: 15rem;
+  margin-left: 10rem;
   margin-top: 2rem;
-   /* cursor: pointer; */
-   border: 2px solid red;
 }
 .sidebarButtonContainer{
-  /* display: none; */
+  display: none;
 }
 
-/* @media(964px>=width){
+@media(964px>=width){
   .sidebarContent{
       display: none;
       visibility: hidden;
@@ -37,6 +39,7 @@
   .productListing {
     margin-left: 0;
     justify-content: space-around;
+    margin-top: 3rem;
   }
   .sidebarButtonContainer{
     display: flex;
@@ -47,6 +50,7 @@
     right: 0;
     background-color: #fff;
     padding: 10px;
+    z-index: 2;
   }
   .sidebarButtonContainer button{
     border: none;
@@ -55,20 +59,23 @@
     font-size: large;
     font-weight: 600;
   }
+  .responsiveSidebarWrapper{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  }
+  .responsiveSidebar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 70vh;
+  }
+  .applyButton{
+    position: fixed;
+    right: 1rem;
+    top: 7rem;
+    border: none;
+  }
 }
-.responsiveSidebarWrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  border: 2px solid black;
-}
-.responsiveSidebarContent{
-  background-color: red;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-Modal{
-  background-color: blue;
-} */

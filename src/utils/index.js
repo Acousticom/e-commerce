@@ -32,9 +32,3 @@ export const getSortedProductsBySlider = (products, value) => {
   return updatedProducts;
 };
 
-// export const getSearchProducts = (products, value) => {
-//   const updatedProducts = products.filter((product) =>
-//     product.brand.toLowerCase().includes(value.toLowerCase())
-//   );
-//   return updatedProducts;
-// };

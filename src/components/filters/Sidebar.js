@@ -1,10 +1,9 @@
 import React from "react";
-import "../filters/Sidebar.css"
 import { useECommerce } from "../../context/ECommerceContext";
 import { ratingsBy, sortingBy } from "../../data/filterData";
 
-export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
-  const { productsData, productsCategories, dispatch, state } = useECommerce();
+export const Sidebar = () => {
+  const {productsCategories, dispatch, state } = useECommerce();
   const { priceInput, categoryFilters, rating, sortBy } = state;
 
   const categoryCheckboxHandler = (event) => {
@@ -25,18 +24,6 @@ export const Sidebar = ({ filteredCategory, showFilter, setShowFilter }) => {
 
   return (
     <div className="sidebarContainer">
-      {/* <div>
-        {showFilter ? (
-          <button onClick={() => setShowFilter(false)}>Apply</button>
-        ) : (
-          <button onClick={() => dispatch({ type: "CLEAR_FILTER" })}>
-            Clear
-          </button>
-        )}
-      </div>
-
- */}
-
       <h3 className="lineHeight">Category</h3>
       {productsCategories.map((category) => (
         <div className="category">

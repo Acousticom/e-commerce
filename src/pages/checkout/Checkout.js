@@ -7,10 +7,7 @@ export const Checkout = () => {
   const { dispatch, state } = useECommerce();
   const { selectedAddress, cart, totalMrp, totalPrice } = state;
   const discountPrice = totalMrp - totalPrice;
-  //   const handleCheckoutClick = () => {
-  //     handleCheckout(selectedAddress, totalPrice);
-  //   };
-  console.log(selectedAddress)
+
   return (
     <div className={styles.container}>
       <div className={styles.addressContainer}>
