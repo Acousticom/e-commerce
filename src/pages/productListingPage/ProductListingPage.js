@@ -11,6 +11,7 @@ import {
   getSortedProductsBySlider,
 } from "../../utils";
 import { ProductCard } from "../productCard/ProductCard";
+import ShimmerProductCard from "../../components/shimmerCard/ShimmerProductCard";
 
 export const ProductListingPage = () => {
   const { productsData, state, dispatch } = useECommerce();
@@ -56,6 +57,7 @@ export const ProductListingPage = () => {
         <button onClick={clearFilterHandler}>clear</button>
       </div>
       <div className="productListing">
+      {isLoading&&<ShimmerProductCard/>}
         {sortedProducts.map((product) => (
           <ProductCard product={product} />
         ))}

@@ -11,6 +11,7 @@ import Layout from "./layout/Layout";
 import Login from "./pages/login/Login";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import SignupForm from "./components/authentication/signupForm/SignupForm";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignupForm/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>
   );

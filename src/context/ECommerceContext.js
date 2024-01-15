@@ -29,17 +29,11 @@ const ECommerceProvider = ({ children }) => {
     toast.success("Removed from wishlist")
   };
   const addToWishlistHandler = (product) => {
-    // user
-    //   ? dispatch({ type: "ADD_TO_WISHLIST", payload: product })
-    //   : navigate("/login");
     dispatch({ type: "ADD_TO_WISHLIST", payload: product });
     toast.success("Added from wishlist")
   };
 
   const addToCartHandler = (product) => {
-    // user
-    //   ? dispatch({ type: "ADD_TO_CART", payload: product })
-    //   : navigate("/login");
     dispatch({ type: "ADD_TO_CART", payload: product });
     toast.success("Added to cart")
   };
