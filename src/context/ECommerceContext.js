@@ -6,7 +6,6 @@ import {
   useState,
 } from "react";
 import { productReducer, initialState } from "../reducer/productReducer";
-import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const ECommerceContext = createContext();
@@ -16,7 +15,6 @@ const ECommerceProvider = ({ children }) => {
   const [productsCategories, setProductsCategories] = useState([]);
 
   const [state, dispatch] = useReducer(productReducer, initialState);
-  const navigate = useNavigate();
 
   const noOfItemsInCart = state?.cart?.length;
   const noOfItemsInWishlist = state?.wishlist?.length;
